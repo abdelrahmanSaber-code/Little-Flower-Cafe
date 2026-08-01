@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Little Flower Cafe — Astoria, Queens</title>
+  <meta name="description" content="Little Flower Cafe: a modern halal coffee shop and bakery in Astoria, Queens, serving Afghan-inspired pastries, rose & cardamom drinks, and all-day breakfast in a blonde-wood, industrial-lit space.">
+
+  <!-- Google Fonts: Fraunces (display, has a literal 'bloom' to its curves), Inter (body), Space Mono (utility labels, nods to the subway signage right outside the door) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,450;0,9..144,600;1,9..144,450&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Skip link for keyboard / screen-reader users -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ NAV ============ -->
+  <header class="site-header" id="site-header">
+    <div class="nav-wrap">
+      <a href="#top" class="brand" aria-label="Little Flower Cafe, home">
+        <!-- Small inline mark: a single line-drawn bloom, reused from the hero signature -->
+        <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
+          <circle cx="20" cy="20" r="3.4" fill="currentColor"/>
+          <path d="M20 20 C14 16, 14 8, 20 4 C26 8, 26 16, 20 20Z" fill="none" stroke="currentColor" stroke-width="1.4"/>
+          <path d="M20 20 C24 15, 32 15, 36 20 C32 25, 24 25, 20 20Z" fill="none" stroke="currentColor" stroke-width="1.4"/>
+          <path d="M20 20 C16 25, 16 33, 20 36 C24 33, 24 25, 20 20Z" fill="none" stroke="currentColor" stroke-width="1.4"/>
+          <path d="M20 20 C16 15, 8 15, 4 20 C8 25, 16 25, 20 20Z" fill="none" stroke="currentColor" stroke-width="1.4"/>
+        </svg>
+        <span class="brand-name">Little&nbsp;Flower</span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Primary">
+        <a href="#story">Story</a>
+        <a href="#menu">Menu</a>
+        <a href="#space">The Space</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#visit">Visit</a>
+      </nav>
+
+      <a class="btn btn-ghost nav-cta" href="#visit">Get&nbsp;Directions</a>
+
+      <!-- Mobile menu toggle -->
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top">
+      <div class="hero-inner">
+        <p class="eyebrow">25-35 36th Ave · Astoria, Queens</p>
+        <h1 class="hero-title">
+          A little flower<br>
+          grown in <span class="ital">steel &amp; blonde wood.</span>
+        </h1>
+        <p class="hero-sub">
+          A modern halal cafe under the elevated tracks in Astoria — Afghan-rooted pastries,
+          rose &amp; cardamom coffee, and all-day breakfast from the family behind Sami&rsquo;s Kabab House.
+        </p>
+        <div class="hero-actions">
+          <a href="#menu" class="btn btn-primary">See the menu</a>
+          <a href="#visit" class="btn btn-outline">Hours &amp; location</a>
+        </div>
+      </div>
+
+      <!-- Signature illustration: a hand-drawn rose blooming out of a steel girder cross-brace.
+           Represents the brief's central tension: industrial Astoria + Afghan floral flavors. -->
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 520 520" class="bloom-svg">
+          <!-- girder cross-brace -->
+          <g class="girder" stroke="var(--steel)" stroke-width="3" fill="none" opacity="0.55">
+            <line x1="40" y1="480" x2="480" y2="480"/>
+            <line x1="60" y1="480" x2="60" y2="120"/>
+            <line x1="460" y1="480" x2="460" y2="120"/>
+            <line x1="60" y1="120" x2="460" y2="120"/>
+            <line x1="60" y1="480" x2="460" y2="120"/>
+            <line x1="460" y1="480" x2="60" y2="120"/>
+          </g>
+          <!-- blooming rose, line-drawn, animated stroke on load -->
+          <g class="bloom" fill="none" stroke="var(--rose)" stroke-width="2.5" stroke-linecap="round">
+            <path class="petal" d="M260 300 C210 280, 200 210, 260 160 C320 210, 310 280, 260 300Z"/>
+            <path class="petal" d="M260 300 C300 260, 370 250, 410 290 C370 330, 300 340, 260 300Z"/>
+            <path class="petal" d="M260 300 C300 340, 300 410, 260 440 C220 410, 220 340, 260 300Z"/>
+            <path class="petal" d="M260 300 C220 340, 150 330, 110 290 C150 250, 220 260, 260 300Z"/>
+            <circle class="petal" cx="260" cy="300" r="14"/>
+            <path class="stem" d="M260 314 C260 380, 250 420, 240 480" stroke="var(--sage)"/>
+            <path class="leaf" d="M250 400 C220 395, 205 415, 210 440 C240 440, 255 420, 250 400Z" stroke="var(--sage)"/>
+          </g>
+        </svg>
+      </div>
+
+      <button class="scroll-cue" id="scroll-cue" aria-label="Scroll to next section">
+        <span></span>
+      </button>
+    </section>
+
+    <!-- ============ FLAVOR TICKER (subway-sign style marquee) ============ -->
+    <div class="ticker" role="presentation" aria-hidden="true">
+      <div class="ticker-track">
+        <span>ROSE</span><span>·</span><span>CARDAMOM</span><span>·</span><span>PISTACHIO</span><span>·</span>
+        <span>TURMERIC</span><span>·</span><span>GUAVA</span><span>·</span><span>SAFFRON</span><span>·</span>
+        <span>ROSE</span><span>·</span><span>CARDAMOM</span><span>·</span><span>PISTACHIO</span><span>·</span>
+        <span>TURMERIC</span><span>·</span><span>GUAVA</span><span>·</span><span>SAFFRON</span><span>·</span>
+      </div>
+    </div>
+
+    <!-- ============ STORY ============ -->
+    <section class="story" id="story">
+      <div class="section-inner story-grid">
+        <div class="story-copy reveal">
+          <p class="eyebrow">The story</p>
+          <h2>Sami&rsquo;s Gen-Z younger sibling</h2>
+          <p>
+            Little Flower was opened by Ali Zaman, whose family has run the beloved
+            Sami&rsquo;s Kabab House down the block for years. Where Sami&rsquo;s is a neighborhood
+            institution for Afghan kababs, Little Flower is its quieter, brighter counterpart —
+            a coffee-and-pastry counter that carries the same roots into a new register.
+          </p>
+          <p>
+            Everything on the menu is halal, and everything on the menu still tastes like
+            somewhere specific: rose water, cardamom, turmeric, and pistachio show up in the
+            coffee, the doughnuts, and the sandwiches alike, sitting comfortably next to the
+            short rib and the soft scrambled egg sammie.
+          </p>
+        </div>
+        <div class="story-figure reveal" aria-hidden="true">
+          <div class="figure-block">
+            <span class="figure-label">EST. BY THE ZAMAN FAMILY</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MENU ============ -->
+    <section class="menu" id="menu">
+      <div class="section-inner">
+        <p class="eyebrow center">On the counter</p>
+        <h2 class="center">A short, well-loved menu</h2>
+        <p class="menu-note center">
+          The lineup rotates with what comes out of the oven — this is what regulars order most.
+          Ask in-cafe for the full list and today&rsquo;s prices.
+        </p>
+
+        <!-- Category filter tabs (JS-driven) -->
+        <div class="menu-tabs" role="tablist" aria-label="Menu categories">
+          <button class="menu-tab is-active" role="tab" aria-selected="true" data-filter="all">All</button>
+          <button class="menu-tab" role="tab" aria-selected="false" data-filter="drinks">Coffee &amp; Tea</button>
+          <button class="menu-tab" role="tab" aria-selected="false" data-filter="pastry">Pastries</button>
+          <button class="menu-tab" role="tab" aria-selected="false" data-filter="savory">Sandwiches &amp; Brunch</button>
+        </div>
+
+        <ul class="menu-grid" id="menu-grid">
+
+          <li class="menu-item" data-cat="pastry">
+            <div class="menu-item-head">
+              <h3>Firni Doughnut</h3>
+              <span class="tag">signature</span>
+            </div>
+            <p>A soft, airy doughnut filled with sweet cardamom-rose custard and dusted with crushed pistachio. The top seller for a reason.</p>
+          </li>
+
+          <li class="menu-item" data-cat="savory">
+            <div class="menu-item-head"><h3>Soft Scrambled Egg Sammie</h3></div>
+            <p>Silky scrambled eggs with crisp halal beef bacon, built for a slow weekday morning.</p>
+          </li>
+
+          <li class="menu-item" data-cat="savory">
+            <div class="menu-item-head"><h3>Short Rib Sandwich</h3></div>
+            <p>Braised short rib piled high — the sandwich regulars point new visitors toward first.</p>
+          </li>
+
+          <li class="menu-item" data-cat="drinks">
+            <div class="menu-item-head"><h3>Rose &amp; Cardamom Latte</h3></div>
+            <p>House espresso softened with rose water and cardamom syrup, made in-house.</p>
+          </li>
+
+          <li class="menu-item" data-cat="drinks">
+            <div class="menu-item-head"><h3>Pink Tea</h3></div>
+            <p>A creamy, rose-hued Afghan tea — the drink regulars say they come back for.</p>
+          </li>
+
+          <li class="menu-item" data-cat="pastry">
+            <div class="menu-item-head"><h3>Turmeric Bun</h3></div>
+            <p>A flaky, golden bun with a delicate, balanced crust — subtle warmth from the turmeric.</p>
+          </li>
+
+          <li class="menu-item" data-cat="savory">
+            <div class="menu-item-head"><h3>Gochujang Fried Chicken Sandwich</h3></div>
+            <p>Crisp fried chicken glazed in a sweet-spicy gochujang lacquer, on a soft bun.</p>
+          </li>
+
+          <li class="menu-item" data-cat="savory">
+            <div class="menu-item-head"><h3>Breakfast Burrito</h3></div>
+            <p>A hearty morning burrito with halal beef bacon — order it early, it's known to sell out.</p>
+          </li>
+
+          <li class="menu-item" data-cat="savory">
+            <div class="menu-item-head"><h3>Guava Pancakes</h3></div>
+            <p>A fruit-forward, brunch-only twist on the stack — worth the weekend wait.</p>
+          </li>
+
+          <li class="menu-item" data-cat="pastry">
+            <div class="menu-item-head"><h3>Pistachio Croissant</h3></div>
+            <p>Classic lamination, finished with a generous layer of pistachio.</p>
+          </li>
+
+          <li class="menu-item" data-cat="pastry">
+            <div class="menu-item-head"><h3>Cardamom Knot</h3></div>
+            <p>A twisted, spiced bun in the Scandinavian style, with a distinctly Little Flower spice mix.</p>
+          </li>
+
+          <li class="menu-item" data-cat="pastry">
+            <div class="menu-item-head"><h3>Lemon Olive-Oil Cake</h3></div>
+            <p>Dense, moist, and bright — a slice that holds up well next to a second coffee.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ THE SPACE ============ -->
+    <section class="space" id="space">
+      <div class="section-inner space-grid">
+        <div class="space-visual reveal" aria-hidden="true">
+          <div class="swatch swatch-wood">
+            <span class="swatch-label">Blonde wood counters</span>
+          </div>
+          <div class="swatch swatch-steel">
+            <span class="swatch-label">Industrial lighting</span>
+          </div>
+          <div class="swatch swatch-rose">
+            <span class="swatch-label">Rose &amp; cardamom on the menu board</span>
+          </div>
+          <div class="swatch swatch-charcoal">
+            <span class="swatch-label">Modernist gray slab tables</span>
+          </div>
+        </div>
+        <div class="space-copy reveal">
+          <p class="eyebrow">The room</p>
+          <h2>Small, bright, and worth the trip</h2>
+          <p>
+            The space is compact — blonde wood, gray slab tables, and warm industrial lighting,
+            just under the elevated tracks. Seating is limited and it fills up fast on weekend
+            mornings, so this isn't a park-yourself-with-a-laptop-all-day kind of place. It's a
+            get-a-great-coffee-and-a-pastry, maybe stay for a sandwich, kind of place.
+          </p>
+          <ul class="amenity-list">
+            <li>Halal menu throughout</li>
+            <li>Outdoor seating, weather permitting</li>
+            <li>Dog-friendly patio</li>
+            <li>Takeout &amp; free Wi-Fi</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ REVIEWS ============ -->
+    <section class="reviews" id="reviews">
+      <div class="section-inner">
+        <p class="eyebrow center">Word around the neighborhood</p>
+        <h2 class="center">What regulars are saying</h2>
+        <p class="reviews-note center">
+          Paraphrased from genuine guest reviews published on Google and other review platforms —
+          not reproduced word-for-word, so you're getting the gist rather than a copy-paste.
+        </p>
+
+        <div class="reviews-score reveal">
+          <span class="score-number">4.6</span>
+          <div class="score-detail">
+            <div class="stars" aria-hidden="true">★★★★★</div>
+            <span class="score-label">from hundreds of reviews online</span>
+          </div>
+        </div>
+
+        <ul class="reviews-grid">
+          <li class="review-card reveal">
+            <div class="stars" aria-hidden="true">★★★★★</div>
+            <p>Praised for its peaceful, welcoming feel and generous seating for a neighborhood coffee shop. The halal beef bacon and lamb sausage get called out as a genuine, tasty alternative to pork &mdash; the breakfast burrito with beef bacon is a favorite order.</p>
+            <span class="review-author">— A weekday regular</span>
+          </li>
+
+          <li class="review-card reveal">
+            <div class="stars" aria-hidden="true">★★★★★</div>
+            <p>One guest called it more than just a cafe &mdash; closer to a neighborhood tradition, citing the guava pancakes and egg sandwich as go-to orders and the staff as some of the warmest around.</p>
+            <span class="review-author">— A returning guest</span>
+          </li>
+
+          <li class="review-card reveal">
+            <div class="stars" aria-hidden="true">★★★★★</div>
+            <p>Small on the inside but mighty on portions: one couple split the lumberjack breakfast and still had plenty to go around.</p>
+            <span class="review-author">— Ashely V.</span>
+          </li>
+
+          <li class="review-card reveal">
+            <div class="stars" aria-hidden="true">★★★★★</div>
+            <p>An iced rose &amp; honey latte and an oversized chocolate croissant won over one Saturday visitor, even with limited seating during the weekend rush &mdash; the outdoor benches came in handy.</p>
+            <span class="review-author">— A Saturday visitor</span>
+          </li>
+
+          <li class="review-card reveal">
+            <div class="stars" aria-hidden="true">★★★★★</div>
+            <p>A mocha and a breakfast sammie with halal bacon came out quickly, and staff were quick to reset tables during a busy stretch &mdash; a small detail that stuck with this guest.</p>
+            <span class="review-author">— A first-time visitor</span>
+          </li>
+
+          <li class="review-card reveal">
+            <div class="stars" aria-hidden="true">★★★★★</div>
+            <p>The short rib sandwich and breakfast burrito top this guest's list, alongside a soft spot for the cafe's compostable containers and plastic-free packaging.</p>
+            <span class="review-author">— A neighborhood visitor</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ VISIT ============ -->
+    <section class="visit" id="visit">
+      <div class="section-inner visit-grid">
+        <div class="visit-copy reveal">
+          <p class="eyebrow">Visit</p>
+          <h2>Find us under the tracks</h2>
+
+          <div class="visit-block">
+            <h3>Address</h3>
+            <p>25-35 36th Ave<br>Astoria, NY 11106</p>
+            <a class="btn btn-outline btn-small" href="https://www.google.com/maps/search/?api=1&query=25-35+36th+Ave+Astoria+NY+11106" target="_blank" rel="noopener">Get directions</a>
+          </div>
+
+          <div class="visit-block">
+            <h3>Hours</h3>
+            <table class="hours-table">
+              <tbody>
+                <tr><th>Monday&ndash;Friday</th><td>7:00 AM &ndash; 4:00 PM</td></tr>
+                <tr><th>Saturday&ndash;Sunday</th><td>8:00 AM &ndash; 4:00 PM</td></tr>
+              </tbody>
+            </table>
+            <p class="hours-note">Popular on weekend mornings — arrive early for the doughnuts before they sell out.</p>
+          </div>
+        </div>
+
+        <div class="visit-map reveal" aria-hidden="true">
+          <!-- Stylized map card in place of an embedded map -->
+          <div class="map-card">
+            <div class="map-pin">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M12 22s7-7.2 7-12.5A7 7 0 0 0 5 9.5C5 14.8 12 22 12 22Z"/>
+                <circle cx="12" cy="9.5" r="2.4"/>
+              </svg>
+            </div>
+            <span class="map-street">36th Ave</span>
+            <span class="map-cross">31st St</span>
+            <span class="map-caption">Astoria, Queens — beside the elevated N/W tracks</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="section-inner footer-grid">
+      <div>
+        <a href="#top" class="brand brand-footer" aria-label="Little Flower Cafe, home">
+          <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
+            <circle cx="20" cy="20" r="3.4" fill="currentColor"/>
+            <path d="M20 20 C14 16, 14 8, 20 4 C26 8, 26 16, 20 20Z" fill="none" stroke="currentColor" stroke-width="1.4"/>
+            <path d="M20 20 C24 15, 32 15, 36 20 C32 25, 24 25, 20 20Z" fill="none" stroke="currentColor" stroke-width="1.4"/>
+            <path d="M20 20 C16 25, 16 33, 20 36 C24 33, 24 25, 20 20Z" fill="none" stroke="currentColor" stroke-width="1.4"/>
+            <path d="M20 20 C16 15, 8 15, 4 20 C8 25, 16 25, 20 20Z" fill="none" stroke="currentColor" stroke-width="1.4"/>
+          </svg>
+          <span class="brand-name">Little&nbsp;Flower</span>
+        </a>
+        <p class="footer-tag">A modern halal cafe in Astoria, Queens — from the family behind Sami&rsquo;s Kabab House.</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#story">Story</a>
+        <a href="#menu">Menu</a>
+        <a href="#space">The Space</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#visit">Visit</a>
+      </nav>
+
+      <p class="footer-meta">
+        25-35 36th Ave, Astoria, NY 11106<br>
+        &copy; <span id="year"></span> Little Flower Cafe
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
